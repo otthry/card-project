@@ -1,0 +1,7 @@
+.price{}
+.sale-price{}
+.btngroup{display:flex;margin-left:auto}
+
+.btngroup button:hover{
+  background-color:#ed9270
+}
