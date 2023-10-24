@@ -1,0 +1,28 @@
+.formcontrol{
+width: 100%;
+padding:10px ;
+}
+.label{
+  display: inline-block;
+  vertical-align: top;
+  font-size: 13px;
+  font-weight: 400;  height: 26px;
+  line-height: 26px;
+  color: #666;
+  letter-spacing: -.025em;
+  width:100px;
+}
+.input{
+
+  padding: 0 5px;
+  height: 26px;
+  line-height: 26px;
+  border: 0;
+  color: #111;
+  background: #fff;
+  border: 1px solid #ebebeb;
+  text-align: left;
+  box-sizing: content-box;
+  vertical-align: top;
+  margin-right: 2px;
+}

@@ -1,0 +1,8 @@
+.mcard-intro{padding:0 0 40px;}.mcard-intro .title{padding:48px 0;font-size:1.3rem;color:#564545}
+.groom{display:inline-block;text-align:right}
+ .and{display:inline-block;margin:0 .3rem;font-size:1rem;text-align:center}
+  .bride{display:inline-block;text-align:left}
+   .date{font-size:.8rem;letter-spacing:-.4px;line-height:2rem;text-shadow:-1px -1px 0 #fff}
+    .place{line-height:1.6rem;margin-top:10px}
+     .photo{line-height:0}
+     .photo img{width:100%}

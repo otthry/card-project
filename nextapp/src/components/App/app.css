@@ -1,0 +1,14 @@
+
+input{
+    padding: 0 5px;
+    height: 26px;
+    line-height: 26px;
+    border: 0;
+    color: #111;
+    background: #fff;
+    border: 1px solid #ebebeb;
+    text-align: left;
+    box-sizing: content-box;
+    vertical-align: top;
+    margin-right: 2px;
+  }

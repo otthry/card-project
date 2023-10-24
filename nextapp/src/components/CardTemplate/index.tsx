@@ -2,17 +2,17 @@ import * as React from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 import { ButtonGroup, Button, Stack, styled } from '@mui/material';
 import styles from './index.module.css'
+import Link from 'next/link';
 
-export default function CardTemplate({ thumbnail = null, title, desc, price, saleprice }) {
+export default function CardTemplate({ thumbnail = null, title, desc, index, price, saleprice }) {
 
     const BootstrapButton = styled(Button)({
-        margin: "4px",
+        margin: "2px",
         height: "37px",
         textAlign: "center",
-        fontSize: "14px",
+        fontSize: "12px",
         boxSizing: "border-box",
         cursor: "pointer",
         padding: "0 16px",
@@ -39,7 +39,7 @@ export default function CardTemplate({ thumbnail = null, title, desc, price, sal
     });
 
     return (
-        <Card sx={{ maxWidth: 500 }}>
+        <Card elevation={0}>
             {thumbnail && <CardMedia
                 component="img"
                 height="500"
@@ -50,28 +50,27 @@ export default function CardTemplate({ thumbnail = null, title, desc, price, sal
                 <Stack direction="row" spacing={2} sx={{
                     "place-content": "space-between"
                 }} >
-                    <Stack direction="column" spacing={2}>
-                        <Typography gutterBottom variant="h5"
-                            fontSize="15px" component="div">
+                    <div className={styles.titleprice}>
+                        <span className={styles.title}>
                             {title}
-                        </Typography>
-
-                        <Typography gutterBottom
-                            fontSize="13px" component="div">
+                        </span>
+                        <span className={styles.price}>
                             <span className={styles.price}>{price}</span>
-                            <span className={styles.saleprice}>{saleprice}</span>
-                        </Typography>
+                            <i className={styles.saleprice}>{saleprice}</i>
+                        </span>
 
-                    </Stack>
+                    </div>
 
                     <Stack direction="row" spacing={2} sx={{
                         "alignItems": "center",
                         "place-content": "space-between"
                     }} className={styles.btngroup} >
-
-                        <BootstrapButton>샘플보기</BootstrapButton>
+<a href="http://iore8655.iptime.org:18100/" target="_blank">
+                        <BootstrapButton >샘플보기</BootstrapButton></a>
+                        <Link href={`/mcard/edit/`}>
                         <BootstrapButton  sx={{color: '#fff',
                 "background":"#f19a79"}}>제작하기</BootstrapButton>
+                </Link>
                     </Stack>
                 </Stack>
             </CardContent>

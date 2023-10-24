@@ -1,20 +1,19 @@
-import Image from 'next/image'
 import styles from './index.module.css'
 import axios from 'axios';
-import AppBar from '@/components/appbar/'
 import CardTemplate from '@/components/CardTemplate'
-import { Typography } from '@mui/material'
+import { JSX, Key } from 'react';
+import { Grid, createTheme } from '@mui/material';
 
 export default function Mcard({ data, ...props }) {
-    return (<>
-       <div>
-       {data.map((item, index) => 
-             <div key={index}>
-                <CardTemplate {...item}></CardTemplate>
-            </div>
+    return ( <Grid container  spacing={2} sx={{
+        "justify-content": "center"}}>
+       {data.map((item: JSX.IntrinsicAttributes & { thumbnail?: null | undefined; title: any; desc: any; price: any; saleprice: any; }, index: Key | null | undefined) => 
+        <Grid item xs={12} md={6}>
+                <CardTemplate {...item} key={index} index={index} ></CardTemplate>
+      </Grid>
+               
         )}
-       </div>
-    </>
+    </Grid>
     )
 }
 

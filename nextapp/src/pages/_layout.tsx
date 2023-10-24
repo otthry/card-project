@@ -1,5 +1,6 @@
 import React from "react";
 import Document, { Html, Head, Main, NextScript } from "next/document";
+import styles from "./index.module.css"
 import { ServerStyleSheets } from "@mui/styles";
 import Footer from "@/components/Footer";
 
@@ -9,7 +10,6 @@ export default class MyDocument extends Document {
       <Html>
         <body>
           <Head></Head>
-          <Main />
           <NextScript />
         </body>
       </Html>

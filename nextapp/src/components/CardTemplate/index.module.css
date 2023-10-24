@@ -1,7 +1,18 @@
-.price{}
-.sale-price{}
-.btngroup{display:flex;margin-left:auto}
-
-.btngroup button:hover{
-  background-color:#ed9270
+.titleprice{
+  display:flex;
+  flex-direction:column;
+}
+.title{
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom:2px;
+}
+.price{
+  font-size: 13px;    font-weight: 600;
+}
+.saleprice{
+  font-size:10px;
+  text-decoration:line-through;
+  color:#bbb;
+  margin-left:4px;
 }

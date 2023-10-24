@@ -7,7 +7,6 @@ import { Typography } from '@mui/material'
 export default function Home() {
   return (<>
 
-    <main className={styles.main}>
       <div className="service">
         <Typography className={styles.h2} variant="h2" fontWeight={600}
           fontSize="15px" component="h2">
@@ -48,7 +47,6 @@ export default function Home() {
 
 
       </div>
-
-    </main></>
+</>
   )
 }

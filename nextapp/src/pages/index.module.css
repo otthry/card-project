@@ -1,6 +1,4 @@
 .main {
-  display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 6rem;
@@ -13,11 +11,7 @@
     align-items: center;
     height: 100%;
   font-family: Roboto,nsk,-apple-system,BlinkMacSystemFont,Apple SD Gothic Neo,Helvetica Neue,Helvetica,Arial,Malgun Gothic,"\B9D1\C740   \ACE0\B515",Dotum,돋움,sans-serif;
-  background-color: #fcfaf7;
-}
-.main > div{
-  width: 100%;
-  max-width: 687px;
+  background-color: #fcfaf7; 
 }
 .homecard{
   display: flex;
@@ -87,3 +81,4 @@
     transform: rotate(0deg);
   }
 }
+

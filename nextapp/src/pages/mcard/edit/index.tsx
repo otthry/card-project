@@ -1,38 +1,19 @@
-import Image from 'next/image'
-import styles from './index.module.css'
-import axios from 'axios';
-import AppBar from '@/components/appbar/'
-import CardTemplate from '@/components/CardTemplate'
-import { Typography } from '@mui/material'
-
-export default function Mcard({ data, ...props }) {
-    console.log(props)
-    console.log(data)
-    return (<>
-       <div>
-       {data.map((item, index) => 
-             <div key={index}>
-                <CardTemplate {...item}></CardTemplate>
-            </div>
-        )}
-       </div>
-    </>
+import CardRenderView from '@/components/CardRenderView';
+import CardConfig from '@/components/CardConfig';
+import { useRouter } from 'next/router';
+import styles from "./index.module.css"
+import { Grid } from '@mui/material';
+export default function McardEdit() {
+    const router = useRouter();
+    console.log(router.query.id)
+    return (<Grid container className={styles.wrapper}>
+        <Grid item xs={12} md={6} lg={6}>
+            <CardRenderView ></CardRenderView>
+        </Grid>
+        <Grid item xs={12} md={6}  lg={6}>
+            <CardConfig></CardConfig>
+        </Grid>
+    </Grid>
     )
 }
 
-
-export async function getStaticProps() {
-    try {
-        const response = await axios.get(
-            "http://localhost:3000/api/cardservice"
-        );
-        const data = response.data;
-        return {
-            props: {
-                ...data,
-            },
-        };
-    } catch (err) {
-        console.log(err);
-    }
-}
