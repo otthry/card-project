@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './index.module.css'
-import AppBar from '@/components/appbar/'
+import AppBar from '@/components/AppBar '
 import HomeCard from '@/components/HomeCard'
 import { Typography } from '@mui/material'
 

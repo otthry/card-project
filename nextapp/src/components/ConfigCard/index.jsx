@@ -5,11 +5,14 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export default function ConfigCard({title,children} : any) {
+export default function ConfigCard({title,children}) {
     return (
-        <Card sx={{ maxWidth: 500 }}>
+        <Card sx={{ maxWidth: 500 ,
+            marginBottom: '20px',
+            padding: '10px 20px 30px 20px'}}>
             <Typography  sx={{padding: '15px' , fontWeight : 700}}>{title}</Typography>
-            <CardContent>{children}
+            <CardContent>
+                {children}
             </CardContent>
         </Card>
     );

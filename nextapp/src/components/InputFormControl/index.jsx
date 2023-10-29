@@ -1,16 +1,10 @@
 import * as React from 'react';
 import styles from "./index.module.css"
 
-interface CardRenderViewProps{
-    title: string;
-    value: string;
-}
-export default function InputFormControl({title,value}:CardRenderViewProps ) {
-
-    
+export default function InputFormControl({title,value} ) {
     return (
         <>
-        <div>
+        <div className={styles.wrapper}>
             <div> 
                 <label className={styles.formcontrol}>
                     <span className={styles.label}>{title}</span>
